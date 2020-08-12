@@ -1,1 +1,12 @@
- DCRPHP体系图可以看：https://www.processon.com/view/link/5f32aaeaf346fb71846bd96b
+dcrphp定位于低代码集群前后端分离的应用系统。应用层用户使用简单，后端用户开发简单。本系统采用前后端分离开发，后端自研框架，前端h-ui框架，开箱即用:  
+　　1、RABC模型会员及权限管理  
+　　2、高度可扩展的模组管理  
+　　3、自由化高的自定义配置中心  
+　　4、Table Edit任意表管理  
+　　5、API中心集成文档及在线测试  
+　　6、集成graylog日志集中管理  
+  
+dcrphp体系图可以看：https://www.processon.com/view/link/5f32aaeaf346fb71846bd96b
+
+Container内组件规范:源码在src目录，命名空间例：DcrPHP/Config，多处理命名为Handler,接口目录为Concerns，如果涉及到需要配置，请在构造函数把DcrPHP/Config/Config实例传入:
+Log::__constuct(DcrPHP/Config/Config $clsConfig)，由于container里的标准组件，设计了可插拔或可替换，如果不想用Contaier绑定的类，请用Container::getInstance()->make('config')->showMainFunctions(); 来获取被替换的类要实现哪些function才能被替换。
