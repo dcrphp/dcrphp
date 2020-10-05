@@ -13,5 +13,5 @@ Log::__constuct(DcrPHP/Config/Config $clsConfig)
 
 所有Repositories遵守的版本号说明：1.0.1:正式版本。 1.0.1-alpha1:1.0.1第一个内部测试版本。 1.0.1-beta1:1.0.1第一个公开测试版本。 1.0.1-rc1:1.0.1第一个候选版本 。  
 Repositories编码修正:  
-1、composer require --dev squizlabs/php_codesniffer  
-2、php vendor/squizlabs/php_codesniffer/bin/phpcbf . --ignore=/vendor/,/config/,/resource/ --standard=PSR12 --extensions=php  
+composer require --dev squizlabs/php_codesniffer -vvv  
+php vendor/squizlabs/php_codesniffer/bin/phpcbf . --ignore=/vendor/,/config/,/resource/ --standard=PSR12 --extensions=php  
